@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:text="MAD_ANIMATION_PRACTICAL"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/alarm_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/alarm_animation_list"
+            android:contentDescription="Alarm animation" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Alarm Time"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="By pressing buttons, Alarm can be created and cancelled." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Check current time by looking below real digital clock." />
+
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/heart_animation_list"
+            android:contentDescription="Heart animation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/createbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Create Alarm"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/baseline_add_alarm_24"
+                android:drawableTint="@color/white"/>
+
+            <Button
+                android:id="@+id/cancelbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel Alarm"
+                android:drawableLeft="@drawable/baseline_alarm_off_24"
+                android:drawableTint="@color/white"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
